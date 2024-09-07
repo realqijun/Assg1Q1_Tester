@@ -1,10 +1,9 @@
 #!/bin/bash
 
-if [ -d "test" ]
+if [ ! -d "test" ]
 then
-	echo "hi"
-else
-	echo "bye"
+	git clone https://github.com/realqijun/Assg1Q1_Tester.git test_files \
+	&& cd test_files && mv test ../ && cd .. && rm -rf test_files
 fi
 
 temp="temp_object_file_1"
